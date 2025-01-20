@@ -1,0 +1,90 @@
+// BUBBLE SORT
+
+// program to sort an array using bubble sort
+// the algorithm works by comparing each element with the next element and swapping them if they are in the wrong order
+// the time complexity of the bubble sort is O(n^2) in the worst case
+// the space complexity of the bubble sort is O(1) because it uses a constant amount of extra space
+
+CODE:-
+public class Strike {
+    public static void main(String[] args) {
+        int[] arr = { 50, 64, 33, 32, 22, 11, 44 };
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("Sorted array: " + java.util.Arrays.toString(arr));
+    }
+}
+
+
+
+// SELECTION SORT
+// THIS ALGORITHMS WORKS BY SELECTING THE LOWEST VALUE AND SHIFTING IN THE FRONT THE ARRAY.
+// THIS PROCESS CONTINUES UNTIL THE LARGER VALUES FALL INTO THE SORTING ORDER.
+// THIS ALGORITHM HAS A TIME COMPLEXITY OF O(N)^2 AND SPACE COMPLEXITY IS O(1) CONSTANT SPACE
+// O = IS A NOTATION USED TO FIGURE OUT THE TIME AND SPACE COMPLEXITIES OF THE ALGORITHM
+
+// program to sort an array using selection sort
+CODE:-
+public class Strike2 {
+    public static void main(String[] args) {
+        int[] array = { 45, 77, 55, 44, 88 };
+        for (int i = 0; i < array.length; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < array.length; j++) {
+
+                if (array[i] > array[minIndex]) {
+                    minIndex = j;
+                }
+                if (minIndex != i) {
+                    int temp = array[i];
+                    array[i] = array[minIndex];
+                    array[minIndex] = temp;
+
+                }
+            }
+        }
+        System.out.println("Sorted array: " + java.util.Arrays.toString(array));
+    }
+}
+
+
+
+// INSERTION SORT
+
+// program to sort the array using insertion sort
+// input 50 30 20 10 40
+// output 10 20 30 40 50
+// the algorrithm works by inserting the elements in the correct position and splitting the array into two parts
+// the left part is sorted and the right part is unsorted
+// we take the first element from the unsorted part and insert it into the correct position in the sorted part
+// we repeat this process until the unsorted part becomes empty
+// the time complexity of the insertion sort is O(n^2) in the worst case
+// the space complexity of the insertion sort is O(1)
+
+CODE:-
+public class Strike3 {
+    public static void main(String[] args) {
+        int[] array = { 50, 30, 20, 10, 40 };
+        int n = array.length;
+        for (int i = 0; i < n; i++) {
+            int insertIndex = i;
+            int currentElement = array[i];
+            int j = i - 1;
+            while (j >= 0 && array[j] > currentElement) {
+                array[j + 1] = array[j];
+                insertIndex = j;
+                j--;
+            }
+            array[insertIndex] = currentElement;
+            System.out.println("Sorted array: " + java.util.Arrays.toString(array));
+        }
+    }
+}
