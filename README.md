@@ -1,6 +1,7 @@
 - 👋 Hi, I’m @apoorv7791
 - 👀 I’m interested in app development
 - 🌱 I’m currently learning javascript and kotlin
+- currently my next step is learing flutter as well
 - 💞️ I’m looking to collaborate on how to use git
 - 📫 How to reach me ...
 
